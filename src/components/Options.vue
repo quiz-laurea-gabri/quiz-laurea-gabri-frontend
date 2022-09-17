@@ -53,7 +53,7 @@
             </div>
         </Listbox>
 
-        <Listbox as="div" v-model="selectedDifficulty">
+        <!-- <Listbox as="div" v-model="selectedDifficulty">
             <ListboxLabel class="block text-sm font-medium text-gray-700">
                 Choose a difficulty
             </ListboxLabel>
@@ -98,7 +98,7 @@
                     </ListboxOptions>
                 </transition>
             </div>
-        </Listbox>
+        </Listbox> -->
         <button class="px-12 py-4 bg-gray-600 text-white text-lg rounded-lg hover:bg-gray-700 transition w-full"
             @click="startQuiz()">
             Start quiz
@@ -121,17 +121,20 @@ import { store } from '.././store';
 
 const categories = ref(null);
 const selectedCategory = ref(null);
-const difficulties = ref(['easy', 'medium', 'hard']);
-const selectedDifficulty = ref('easy');
+// const difficulties = ref(['easy', 'medium', 'hard']);
+// const selectedDifficulty = ref('easy');
 
 onMounted(() => {
-    fetch('https://opentdb.com/api_category.php')
-        .then((res) => res.json())
-        .then((res) => {
-            categories.value = res.trivia_categories;
-            selectedCategory.value = res.trivia_categories[0].name;
-            store.loading = false;
-        });
+    categories.value = ["Grammatica", "My british side", "Interazioni sociali"];
+    selectedCategory.value = categories[0];
+    store.loading = false;
+    // fetch('https://opentdb.com/api_category.php')
+    //     .then((res) => res.json())
+    //     .then((res) => {
+    //         categories.value = res.trivia_categories;
+    //         selectedCategory.value = res.trivia_categories[0].name;
+    //         store.loading = false;
+    //     });
 });
 
 const startQuiz = () => {
@@ -140,7 +143,7 @@ const startQuiz = () => {
     ).id;
     store.startQuiz({
         category: selectedCategoryId,
-        difficulty: selectedDifficulty,
+        // difficulty: selectedDifficulty,
     });
 };
 </script>
