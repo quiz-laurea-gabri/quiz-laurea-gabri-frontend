@@ -8,16 +8,17 @@
     "start": "npm run build && serve dist"
   },
   "dependencies": {
-    "@vue/cli-service": "^5.0.8",
-    "axios": "^0.27.2",
-    "serve": "^14.0.1",
-    "vue": "^3.2.38",
-    "@vitejs/plugin-vue": "^3.0.3",
-    "vite": "^3.0.9",
     "@headlessui/vue": "^1.6.7",
     "@heroicons/vue": "^1.0.6",
+    "@videojs-player/vue": "^1.0.0",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "@vue/cli-service": "^5.0.8",
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
-    "tailwindcss": "^3.1.5"
+    "serve": "^14.0.1",
+    "tailwindcss": "^3.1.5",
+    "video.js": "^7.20.3",
+    "vite": "^3.0.9",
+    "vue": "^3.2.38"
   }
 }

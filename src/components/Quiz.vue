@@ -15,7 +15,13 @@
                 </div>
                 <div v-if="store.data.results[store.currentQuestion].image"
                     class="border-4 border-gray-400 p-3 w-full rounded-lg shadow-xl flex items-center justify-center md:p-5 mb-3 w-1/2">
-                    <img :src="store.data.results[store.currentQuestion].image" /></div>
+                    <img :src="store.data.results[store.currentQuestion].image" />
+                </div>
+                <div v-if="store.data.results[store.currentQuestion].video"
+                    class="border-4 border-gray-400 p-3 w-full rounded-lg shadow-xl flex items-center justify-center md:p-5 mb-3 w-1/2">
+                    <video-player :src=store.data.results[store.currentQuestion].video controls :loop="true"
+                        :volume="0.6" />
+                </div>
                 <div
                     class="border-4 border-gray-400 p-3 w-full rounded-lg shadow-xl flex items-center justify-center md:p-5 mb-3">
                     <h1 class="text-center font-medium md:text-lg"
@@ -53,10 +59,14 @@
 import Answer from './Answer.vue';
 import Loader from './Loader.vue';
 import { store } from '../store';
+import { VideoPlayer } from '@videojs-player/vue';
+import 'video.js/dist/video-js.css';
+
 export default {
     components: {
         Answer,
         Loader,
+        VideoPlayer
     },
     data() {
         return {

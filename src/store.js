@@ -1,6 +1,7 @@
 import { reactive } from 'vue';
 import { shuffle } from './helpers';
 import gabriPanchina from './assets/gabri_panchina.jpeg';
+import gabriOnda from './assets/gabri_onda.mp4';
 
 export const store = reactive({
     score: 0,
@@ -33,6 +34,12 @@ export const store = reactive({
         this.questionCount = 1;
         this.data = {
             results: [
+                {
+                    video: gabriOnda,
+                    shuffled_answers: shuffle(["Mancano", "le", "risposte", ":)"]),
+                    correct_answer: "12",
+                    question: "Perchè eravamo sul porto quella sera?"
+                },
                 {
                     image: gabriPanchina,
                     shuffled_answers: shuffle(["12", "6", "ventordici", "yes"]),
