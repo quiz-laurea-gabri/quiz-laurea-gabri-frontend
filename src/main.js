@@ -1,9 +1,5 @@
-import axios from 'axios'
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import './index.css';
 
-import './assets/main.css'
-
-createApp(App).mount('#app')
-
-axios.get("https://quiz-laurea-gabri.herokuapp.com/").then(res => console.log("Received " + res))
+createApp(App).mount('#app');

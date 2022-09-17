@@ -13,6 +13,11 @@
     "serve": "^14.0.1",
     "vue": "^3.2.38",
     "@vitejs/plugin-vue": "^3.0.3",
-    "vite": "^3.0.9"
+    "vite": "^3.0.9",
+    "@headlessui/vue": "^1.6.7",
+    "@heroicons/vue": "^1.0.6",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.5"
   }
 }
