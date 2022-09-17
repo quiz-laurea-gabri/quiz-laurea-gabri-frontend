@@ -13,6 +13,9 @@
                           'bg-gray-200': !item.guessedRight,
                         }"></div>
                 </div>
+                <div v-if="store.data.results[store.currentQuestion].image"
+                    class="border-4 border-gray-400 p-3 w-full rounded-lg shadow-xl flex items-center justify-center md:p-5 mb-3 w-1/2">
+                    <img :src="store.data.results[store.currentQuestion].image" /></div>
                 <div
                     class="border-4 border-gray-400 p-3 w-full rounded-lg shadow-xl flex items-center justify-center md:p-5 mb-3">
                     <h1 class="text-center font-medium md:text-lg"
@@ -25,10 +28,10 @@
                 <div class="grid grid-cols-1 gap-4 md:gap-4 md:grid-cols-2">
                     <Answer v-for="answer in store.data.results[store.currentQuestion]
                     .shuffled_answers" :key="answer" :text="answer" :is-valid-answer="
-                  answer == store.data.results[store.currentQuestion].correct_answer
-                " :is-invalid-answer="
-                answer != store.data.results[store.currentQuestion].correct_answer
-              " :show-answer="store.showAnswer" @check-answer="store.checkAnswer"></Answer>
+                      answer == store.data.results[store.currentQuestion].correct_answer
+                    " :is-invalid-answer="
+                      answer != store.data.results[store.currentQuestion].correct_answer
+                    " :show-answer="store.showAnswer" @check-answer="store.checkAnswer"></Answer>
                 </div>
             </div>
         </div>

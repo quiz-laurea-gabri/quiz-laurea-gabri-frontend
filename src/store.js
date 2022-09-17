@@ -1,5 +1,6 @@
 import { reactive } from 'vue';
 import { shuffle } from './helpers';
+import gabriPanchina from './assets/gabri_panchina.jpeg';
 
 export const store = reactive({
     score: 0,
@@ -31,26 +32,38 @@ export const store = reactive({
         this.loading = false;
         this.questionCount = 1;
         this.data = {
-            results: [{
-                shuffled_answers: shuffle(["Piazza Dam", "a blowjob for my friend", "aereo piccolo", "fratm"]),
-                question: "Sorry, _____________?"
-            },
-            {
-                shuffled_answers: shuffle(["50€", "boh", "si", "daje"]),
-                question: "Quanto costava il blowjob per Edo ad Amsterdam?"
-            },
-            {
-                shuffled_answers: shuffle(["3", "molti", "4", "2"]),
-                question: "Quanti specchietti hai rotto a Rimini quella volta con Pippo?"
-            },
-            {
-                shuffled_answers: shuffle(["Aneddoto", "Anetodo", "Anettodo", "Anedotto"]),
-                question: ""
-            },
-            {
-                shuffled_answers: shuffle(["50 km/h", "60 km/h", "70 km/h", "80 km/h"]),
-                question: "Qual è il limite massimo di velocità in autostrada?"
-            },
+            results: [
+                {
+                    image: gabriPanchina,
+                    shuffled_answers: shuffle(["12", "6", "ventordici", "yes"]),
+                    correct_answer: "12",
+                    question: "Quanti shottini avevi bevuto quella sera?"
+                },
+                {
+                    shuffled_answers: shuffle(["Piazza Dam", "a blowjob for my friend", "aereo piccolo", "fratm"]),
+                    correct_answer: "Piazza Dam",
+                    question: "Sorry, _____________?"
+                },
+                {
+                    shuffled_answers: shuffle(["50€", "boh", "si", "daje"]),
+                    correct_answer: "50€",
+                    question: "Quanto costava il blowjob per Edo ad Amsterdam?"
+                },
+                {
+                    shuffled_answers: shuffle(["3", "molti", "4", "2"]),
+                    correct_answer: "3",
+                    question: "Quanti specchietti hai rotto a Rimini quella volta con Pippo?"
+                },
+                {
+                    shuffled_answers: shuffle(["Aneddoto", "Anetodo", "Anettodo", "Anedotto"]),
+                    correct_answer: "Aneddoto",
+                    question: ""
+                },
+                {
+                    shuffled_answers: shuffle(["50 km/h", "60 km/h", "70 km/h", "80 km/h"]),
+                    correct_answer: "80 km/h",
+                    question: "Qual è il limite massimo di velocità in autostrada?"
+                },
             ]
         };
         // this.loading = true;
