@@ -2,6 +2,7 @@ import { reactive } from 'vue';
 import { shuffle } from './helpers';
 import gabriPanchina from './assets/gabri_panchina.jpeg';
 import gabriOnda from './assets/gabri_onda.mp4';
+import gabriPompino from './assets/pompino.mp3';
 
 export const store = reactive({
     score: 0,
@@ -35,9 +36,15 @@ export const store = reactive({
         this.data = {
             results: [
                 {
+                    audio: gabriPompino,
+                    shuffled_answers: shuffle(["m'ha fatto un pompino", "me la sono scopata", "m'ha detto di no", "le ho fatto leggere Berserk"]),
+                    correct_answer: "m'ha fatto un pompino",
+                    question: "Completa l'audio."
+                },
+                {
                     video: gabriOnda,
                     shuffled_answers: shuffle(["Mancano", "le", "risposte", ":)"]),
-                    correct_answer: "12",
+                    correct_answer: "Mancano",
                     question: "Perchè eravamo sul porto quella sera?"
                 },
                 {

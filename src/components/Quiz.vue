@@ -13,14 +13,25 @@
                           'bg-gray-200': !item.guessedRight,
                         }"></div>
                 </div>
-                <div v-if="store.data.results[store.currentQuestion].image"
-                    class="border-4 border-gray-400 p-3 rounded-lg shadow-xl flex items-center justify-center md:p-5 mb-3 w-full">
-                    <img :src="store.data.results[store.currentQuestion].image" />
+                <div v-if="store.data.results[store.currentQuestion].image">
+                    <div
+                        class="border-4 border-gray-400 p-3 rounded-lg shadow-xl flex items-center justify-center md:p-5 mb-3 w-full">
+                        <img :src="store.data.results[store.currentQuestion].image" />
+                    </div>
                 </div>
-                <div v-if="store.data.results[store.currentQuestion].video"
-                    class="border-4 border-gray-400 p-3 rounded-lg shadow-xl flex items-center justify-center md:p-5 mb-3 w-full">
-                    <video-player :src=store.data.results[store.currentQuestion].video controls :loop="true"
-                        :volume="0.6" />
+                <div v-if="store.data.results[store.currentQuestion].video">
+                    <div
+                        class="border-4 border-gray-400 p-3 rounded-lg shadow-xl flex items-center justify-center md:p-5 mb-3 w-full">
+                        <video-player :src=store.data.results[store.currentQuestion].video controls :loop="true"
+                            :volume="0.6" />
+                    </div>
+                </div>
+                <div v-if="store.data.results[store.currentQuestion].audio">
+                    <div>
+                        <audio-player ref="audioPlayer" :audio-list="[store.data.results[store.currentQuestion].audio]"
+                            :show-next-button="false" :show-prev-button="false" :is-loop="false"
+                            theme-color="#ff2929" />
+                    </div>
                 </div>
                 <div
                     class="border-4 border-gray-400 p-3 w-full rounded-lg shadow-xl flex items-center justify-center md:p-5 mb-3">
@@ -62,12 +73,14 @@ import Loader from './Loader.vue';
 import { store } from '../store';
 import { VideoPlayer } from '@videojs-player/vue';
 import 'video.js/dist/video-js.css';
+import AudioPlayer from '@liripeng/vue-audio-player';
 
 export default {
     components: {
         Answer,
         Loader,
-        VideoPlayer
+        VideoPlayer,
+        AudioPlayer
     },
     data() {
         return {
