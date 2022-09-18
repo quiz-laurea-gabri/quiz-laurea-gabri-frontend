@@ -2,9 +2,9 @@
     <Loader v-if="store.loading"></Loader>
     <div v-else class="w-11/12 mx-auto grid grid-cols-1 gap-y-8 lg:w-5/12">
         <h1 class="text-center text-3xl my-12 font-bold">
-            Trivia<span class="text-purple-500">GO</span>
+            Gabri<span class="text-purple-500">Quiz</span>
         </h1>
-        <Listbox as="div" v-model="selectedCategory">
+        <!-- <Listbox as="div" v-model="selectedCategory">
             <ListboxLabel class="block text-sm font-medium text-gray-700">
                 Choose a category
             </ListboxLabel>
@@ -51,7 +51,7 @@
                     </ListboxOptions>
                 </transition>
             </div>
-        </Listbox>
+        </Listbox> -->
 
         <!-- <Listbox as="div" v-model="selectedDifficulty">
             <ListboxLabel class="block text-sm font-medium text-gray-700">
@@ -108,14 +108,14 @@
   
 <script setup>
 import { ref, onMounted } from 'vue';
-import {
-    Listbox,
-    ListboxButton,
-    ListboxLabel,
-    ListboxOption,
-    ListboxOptions,
-} from '@headlessui/vue';
-import { CheckIcon, SelectorIcon } from '@heroicons/vue/solid';
+// import {
+//     Listbox,
+//     ListboxButton,
+//     ListboxLabel,
+//     ListboxOption,
+//     ListboxOptions,
+// } from '@headlessui/vue';
+// import { CheckIcon, SelectorIcon } from '@heroicons/vue/solid';
 import Loader from './Loader.vue';
 import { store } from '.././store';
 
