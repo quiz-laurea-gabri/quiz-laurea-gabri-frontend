@@ -35,14 +35,30 @@ export const store = reactive({
         this.questionCount = 1;
         this.data = {
             results: [
-                newQuestion("Completa l'audio.", ["m'ha fatto un pompino", "me la sono scopata", "m'ha detto di no", "le ho fatto leggere Berserk"], {audio:gabriPompino}),
-                newQuestion("Perchè eravamo sul porto quella sera?", ["Mancano", "le", "risposte", ":)"], {video:gabriOnda}),
-                newQuestion("Quanti shottini avevi bevuto quella sera?", ["12","6","ventordici","yes"],{image:gabriPanchina}),
-                newQuestion("Sorry, _____________?",["Piazza Dam", "a blowjob for my friend", "aereo piccolo", "fratm"]),
-                newQuestion("Quanto costava il blowjob per Edo ad Amsterdam?",["50€", "boh", "si", "daje"]),
-                newQuestion("Quanti specchietti hai rotto a Rimini quella volta con Pippo?",["3", "molti", "4", "2"]),
-                newQuestion("", ["Aneddoto", "Anetodo","Anettodo","Anedotto"]),
-                newQuestion("Qual è il limite massimo di velocità in autostrada?",["50 km/h", "60 km/h", "70 km/h", "80 km/h"])
+                newQuestion("Completa l'audio.", ["m'ha fatto un pompino", "me la sono scopata", "m'ha detto di no", "le ho fatto leggere Berserk"], { audio: gabriPompino }),
+                newQuestion("Quanti shottini avevi bevuto quella sera?", ["12", "6", "ventordici", "yes"], { image: gabriPanchina }),
+                newQuestion("Sorry, _____________?", ["Piazza Dam", "a blowjob for my friend", "aereo piccolo", "fratm"]),
+                newQuestion("Quanto costava il blowjob per Edo ad Amsterdam?", ["50€", "boh", "si", "daje"]),
+                newQuestion("Quanti specchietti hai rotto a Rimini quella volta con Pippo?", ["3", "molti", "4", "2"]),
+                newQuestion("", ["Aneddoto", "Anetodo", "Anettodo", "Anedotto"]),
+                newQuestion("Qual è il limite massimo di velocità in autostrada?", ["80 km/h", "50 km/h", "60 km/h", "70 km/h"]),
+                //
+                newQuestion("Cos'è uno shuttle da Bologna a Rimini?", ["Un autobus", "Un aereo piccolo", "Una navicella spaziale", "Un carrello della spesa"]),
+                newQuestion("Qual è la media mensile delle tue chiamate Whatsapp a Dani?", ["20-30", "0-10", "10-20", "30+"]),
+                newQuestion("A che ora?", ["Nove meno un quarto", "Otto e tre quarti", "Nove e un quarto", "Nove"]),
+                newQuestion("Quale di questi NON è un metodo di rimorchio funzionante?", ["Chiederle di uscire", "Birretta?", "Mostrare foto di gatti", "Dire che lavori per Netflix"]),
+                newQuestion("Chi ti ha pagato le patatine al George?", ["Lori", "Pippo", "Dani", "Edo"]),
+                newQuestion("Do you speak english?", ["Una porzione o due?", "Yes", "Of course", "Ma chi sei"]),
+                newQuestion("Fino a che ora ti sei sparato hentai la sera prima di Staccoli?", ["4:00", "3:00", "2:00", "5:00"]),
+                newQuestion("Cosa c'era nella piastra che hai rovesciato al cinese?", ["Noodles", "Riso", "Spaghetti", "Ravioli"]),
+                newQuestion("Come si chiama la libreria?", ["Billy", "George", "Aaron", "Thomas"]),
+                newQuestion("Quale combinazione ti ha fatto sboccare ad Amsterdam?", ["Silver Haze e AK 47", "Cultilite e Davinci", "Delta9 e Purple Haze", "Enecta e Florlis"]),
+                newQuestion("Perchè eravamo sul porto quella sera?", ["Per vedere le onde", "A pesca", "Per fare un tuffo", "Per pisciare"], { video: gabriOnda }),
+                newQuestion("Dove fu scattata la foto commemorativa dell'episodio del raviolo?", ["Tokyo", "Fuji 3", "Sushi King", "Sushimi"]),
+                newQuestion("Quali di questi ritmi non è presente nelle opere d'arte?", ["Shuffle", "Lento", "Pausato", "Accelerato"]),
+                newQuestion("In quale volume è presente la scena del cavallo?", ["17", "18", "15", "16"]),
+                newQuestion("Chi è rimasto più scioccato dal fatto che tu avessi finalmente trovato una tipa?", ["Sbiru", "Dani", "Simo", "Pietro"]),
+                newQuestion("Qual è quello giusto?", ["Beerotto", "Birotto", "Birrotto", "Berrotto"]),
             ]
         };
         // this.loading = true;
