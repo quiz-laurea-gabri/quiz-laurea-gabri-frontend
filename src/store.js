@@ -1,5 +1,5 @@
 import { reactive } from 'vue';
-import { shuffle } from './helpers';
+import { shuffle, newQuestion } from './helpers';
 import gabriPanchina from './assets/gabri_panchina.jpeg';
 import gabriOnda from './assets/gabri_onda.mp4';
 import gabriPompino from './assets/pompino.mp3';
@@ -35,49 +35,14 @@ export const store = reactive({
         this.questionCount = 1;
         this.data = {
             results: [
-                {
-                    audio: gabriPompino,
-                    shuffled_answers: shuffle(["m'ha fatto un pompino", "me la sono scopata", "m'ha detto di no", "le ho fatto leggere Berserk"]),
-                    correct_answer: "m'ha fatto un pompino",
-                    question: "Completa l'audio."
-                },
-                {
-                    video: gabriOnda,
-                    shuffled_answers: shuffle(["Mancano", "le", "risposte", ":)"]),
-                    correct_answer: "Mancano",
-                    question: "Perchè eravamo sul porto quella sera?"
-                },
-                {
-                    image: gabriPanchina,
-                    shuffled_answers: shuffle(["12", "6", "ventordici", "yes"]),
-                    correct_answer: "12",
-                    question: "Quanti shottini avevi bevuto quella sera?"
-                },
-                {
-                    shuffled_answers: shuffle(["Piazza Dam", "a blowjob for my friend", "aereo piccolo", "fratm"]),
-                    correct_answer: "Piazza Dam",
-                    question: "Sorry, _____________?"
-                },
-                {
-                    shuffled_answers: shuffle(["50€", "boh", "si", "daje"]),
-                    correct_answer: "50€",
-                    question: "Quanto costava il blowjob per Edo ad Amsterdam?"
-                },
-                {
-                    shuffled_answers: shuffle(["3", "molti", "4", "2"]),
-                    correct_answer: "3",
-                    question: "Quanti specchietti hai rotto a Rimini quella volta con Pippo?"
-                },
-                {
-                    shuffled_answers: shuffle(["Aneddoto", "Anetodo", "Anettodo", "Anedotto"]),
-                    correct_answer: "Aneddoto",
-                    question: ""
-                },
-                {
-                    shuffled_answers: shuffle(["50 km/h", "60 km/h", "70 km/h", "80 km/h"]),
-                    correct_answer: "80 km/h",
-                    question: "Qual è il limite massimo di velocità in autostrada?"
-                },
+                newQuestion("Completa l'audio.", ["m'ha fatto un pompino", "me la sono scopata", "m'ha detto di no", "le ho fatto leggere Berserk"], {audio:gabriPompino}),
+                newQuestion("Perchè eravamo sul porto quella sera?", ["Mancano", "le", "risposte", ":)"], {video:gabriOnda}),
+                newQuestion("Quanti shottini avevi bevuto quella sera?", ["12","6","ventordici","yes"],{image:gabriPanchina}),
+                newQuestion("Sorry, _____________?",["Piazza Dam", "a blowjob for my friend", "aereo piccolo", "fratm"]),
+                newQuestion("Quanto costava il blowjob per Edo ad Amsterdam?",["50€", "boh", "si", "daje"]),
+                newQuestion("Quanti specchietti hai rotto a Rimini quella volta con Pippo?",["3", "molti", "4", "2"]),
+                newQuestion("", ["Aneddoto", "Anetodo","Anettodo","Anedotto"]),
+                newQuestion("Qual è il limite massimo di velocità in autostrada?",["50 km/h", "60 km/h", "70 km/h", "80 km/h"])
             ]
         };
         // this.loading = true;
