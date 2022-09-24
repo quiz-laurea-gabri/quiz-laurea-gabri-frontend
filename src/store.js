@@ -40,7 +40,7 @@ export const store = reactive({
                 newQuestion("Sorry, _____________?", ["Piazza Dam", "a blowjob for my friend", "aereo piccolo", "fratm"]),
                 newQuestion("Quanto costava il blowjob per Edo ad Amsterdam?", ["50€", "boh", "si", "daje"]),
                 newQuestion("Quanti specchietti hai rotto a Rimini quella volta con Pippo?", ["3", "molti", "4", "2"]),
-                newQuestion("", ["Aneddoto", "Anetodo", "Anettodo", "Anedotto"]),
+                newQuestion("Qual è quello giusto?", ["Aneddoto", "Anetodo", "Anettodo", "Anedotto"]),
                 newQuestion("Qual è il limite massimo di velocità in autostrada?", ["80 km/h", "50 km/h", "60 km/h", "70 km/h"]),
                 //
                 newQuestion("Cos'è uno shuttle da Bologna a Rimini?", ["Un autobus", "Un aereo piccolo", "Una navicella spaziale", "Un carrello della spesa"]),
