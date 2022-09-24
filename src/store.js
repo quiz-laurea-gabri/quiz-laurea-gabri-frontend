@@ -1,8 +1,11 @@
 import { reactive } from 'vue';
-import { shuffle, newQuestion } from './helpers';
+import { newQuestion } from './helpers';
+
 import gabriPanchina from './assets/gabri_panchina.jpeg';
 import gabriOnda from './assets/gabri_onda.mp4';
 import gabriPompino from './assets/pompino.mp3';
+import audioLibreria from './assets/libreria.mp3';
+import fotoMeditazione from './assets/meditazione.jpeg';
 
 export const store = reactive({
     score: 0,
@@ -51,7 +54,8 @@ export const store = reactive({
                 newQuestion("Do you speak english?", ["Una porzione o due?", "Yes", "Of course", "Ma chi sei"]),
                 newQuestion("Fino a che ora ti sei sparato hentai la sera prima di Staccoli?", ["4:00", "3:00", "2:00", "5:00"]),
                 newQuestion("Cosa c'era nella piastra che hai rovesciato al cinese?", ["Noodles", "Riso", "Spaghetti", "Ravioli"]),
-                newQuestion("Come si chiama la libreria?", ["Billy", "George", "Aaron", "Thomas"]),
+                newQuestion("Come si chiama la libreria?", ["Billy", "George", "Aaron", "Thomas"], { audio: audioLibreria }),
+                newQuestion("Dov'eri?", ["Amsterdam", "Rimini", "Scacciano", "Bologna"], { image: fotoMeditazione }),
                 newQuestion("Quale combinazione ti ha fatto sboccare ad Amsterdam?", ["Silver Haze e AK 47", "Cultilite e Davinci", "Delta9 e Purple Haze", "Enecta e Florlis"]),
                 newQuestion("Perchè eravamo sul porto quella sera?", ["Per vedere le onde", "A pesca", "Per fare un tuffo", "Per pisciare"], { video: gabriOnda }),
                 newQuestion("Dove fu scattata la foto commemorativa dell'episodio del raviolo?", ["Tokyo", "Fuji 3", "Sushi King", "Sushimi"]),
